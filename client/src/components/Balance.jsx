@@ -1,5 +1,6 @@
 import React,{useContext} from 'react'
 import {GlobalContext} from '../context/GlobalContext';
+import {numberWithCommas} from '../util/format'
 
 const Balance = () => {
     const {transactions}=useContext(GlobalContext);
@@ -9,7 +10,7 @@ const Balance = () => {
     return (
         <div>
             <h3>Your Balance</h3>
-            <p>$ {total}</p>
+            <p>$ {numberWithCommas(total)}</p>
         </div>
     )
 }
